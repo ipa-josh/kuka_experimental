@@ -1,0 +1,32 @@
+<launch>
+<!--launch-prefix="gdb -ex run - -args" -->
+  <node name="driver" pkg="ipa_kuka_rsi" type="driver" output="screen">
+  
+    <!-- auto-initialization supersedes initialization service call-->
+    <param name="initialized" value="true" />
+    
+    <!-- mapping between RSI parameters -->
+    <param name="RSI_joint_name" value="A" />
+    <param name="RSI_cart_name" value="R" />
+    
+    <!-- motion mode to start with -->
+    <param name="mode_motion" value="cart" />
+    
+    <!-- update frequency for status messages [Hz] -->
+    <param name="frequency" value="2" />
+    
+    <!-- TF frames-->
+    <param name="tip_link" value="tip" />
+    <param name="base_link" value="base" />
+
+    <!-- ERC configuration file, shared between arm and driver -->
+    <param name="config" value="$(find ipa_kuka_rsi)/common/KUKA/RSI_UniversalEthernetConfig.xml" />
+    
+    <!-- list of joint names (and therefore the number of joints) -->
+	<rosparam param="joint_names">["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]</rosparam>
+	
+    <!-- limits of each joint (matching joint name list) in rad -->
+	<rosparam param="joint_limits">[ [-100.,100.],[-100.,100.],[-100.,100.], [-100.,100.],[-100.,100.],[-100.,100.] ]</rosparam>
+  </node>
+</launch>
+

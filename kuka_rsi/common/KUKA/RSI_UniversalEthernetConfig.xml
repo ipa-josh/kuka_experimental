@@ -1,0 +1,45 @@
+<ROOT>
+   <CONFIG>
+      <IP_NUMBER>192.1.10.1</IP_NUMBER>   <!-- IP-number of the external socket -->
+      <PORT>49150</PORT>                   <!-- Port-number of the external socket -->
+      <PROTOCOL>UDP</PROTOCOL>            <!-- TCP or UDP, Protocol of the socket !-->      
+      <SENTYPE>ImFree</SENTYPE>        <!-- The name of your system send in <Sen Type="" > -->     
+      <PROTCOLLENGTH>Off</PROTCOLLENGTH>  <!-- On or Off, Send the length of data in bytes before XML data begins!-->
+      <ONLYSEND>FALSE</ONLYSEND>       <!-- TRUE means the client don't expect answers. Do not send anything to robot -->
+   </CONFIG>
+   
+   <SEND>
+      <ELEMENTS>
+	 <ELEMENT TAG="DEF_RIst" TYPE="DOUBLE" INDX="INTERNAL" />
+	 <ELEMENT TAG="DEF_AIPos" TYPE="DOUBLE" INDX="INTERNAL" />
+	 <ELEMENT TAG="DEF_RSol" TYPE="DOUBLE" INDX="INTERNAL" />
+	 <ELEMENT TAG="DEF_ASPos" TYPE="DOUBLE" INDX="INTERNAL" />
+		 
+         <ELEMENT TAG="ATorque1" TYPE="DOUBLE" INDX="3" />
+         <ELEMENT TAG="ATorque2" TYPE="DOUBLE" INDX="4" />
+         <ELEMENT TAG="ATorque3" TYPE="DOUBLE" INDX="5" />
+         <ELEMENT TAG="ATorque4" TYPE="DOUBLE" INDX="6" />
+         <ELEMENT TAG="ATorque5" TYPE="DOUBLE" INDX="7" />
+         <ELEMENT TAG="ATorque6" TYPE="DOUBLE" INDX="8" />
+      </ELEMENTS>
+   </SEND>
+   <RECEIVE>
+      <ELEMENTS>
+         <ELEMENT TAG="A.A1" TYPE="DOUBLE" INDX="1" HOLDON="1" />
+         <ELEMENT TAG="A.A2" TYPE="DOUBLE" INDX="2" HOLDON="1" />
+         <ELEMENT TAG="A.A3" TYPE="DOUBLE" INDX="3" HOLDON="1" />
+         <ELEMENT TAG="A.A4" TYPE="DOUBLE" INDX="4" HOLDON="1" />
+         <ELEMENT TAG="A.A5" TYPE="DOUBLE" INDX="5" HOLDON="1" />
+         <ELEMENT TAG="A.A6" TYPE="DOUBLE" INDX="6" HOLDON="1" />
+		 
+         <ELEMENT TAG="R.X" TYPE="DOUBLE" INDX="7" HOLDON="1" />
+         <ELEMENT TAG="R.Y" TYPE="DOUBLE" INDX="8" HOLDON="1" />
+         <ELEMENT TAG="R.Z" TYPE="DOUBLE" INDX="9" HOLDON="1" />
+         <ELEMENT TAG="R.A" TYPE="DOUBLE" INDX="10" HOLDON="1" />
+         <ELEMENT TAG="R.B" TYPE="DOUBLE" INDX="11" HOLDON="1" />
+         <ELEMENT TAG="R.C" TYPE="DOUBLE" INDX="12" HOLDON="1" />
+		 
+         <ELEMENT TAG="Stop" TYPE="BOOL" INDX="13" HOLDON="1" />
+      </ELEMENTS>
+   </RECEIVE>
+</ROOT>

@@ -1,0 +1,30 @@
+<package>
+  <description brief="ipa_kuka_rsi">
+
+     ipa_kuka_rsi
+     ROS driver for Kuka RSI protocol
+     
+     Fraunhofer IPA, group assembly automation
+
+  </description>
+  <author>Lorenz Halt (Lorenz.Halt@ipa.fraunhofer.de), Joshua Hampp (Joshua.Hampp@ipa.fraunhofer.de)</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ipa_kuka_rsi</url>
+  
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="tf_conversions"/>
+  <depend package="eigen_conversions"/>
+  <depend package="actionlib"/>
+  <depend package="dynamic_reconfigure" />
+
+  <depend package="cob_srvs"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="brics_actuator"/>
+  <depend package="control_msgs"/>
+  <!--depend package="industrial_msgs"/-->
+
+</package>
+
+
